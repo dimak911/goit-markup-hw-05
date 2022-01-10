@@ -60,9 +60,10 @@
       <section class="hero">
         <div class="container">
           <h1 class="hero-text">Эффективные решения<br />для вашего бизнеса</h1>
-          <button class="hero-button" type="button">Заказать услугу</button>
+          <button class="hero-button" type="button" data-modal-open>Заказать услугу</button>
         </div>
       </section>
+
       <!-- что мы предлагаем? -->
       <section class="section">
         <div class="container">
@@ -124,25 +125,42 @@
           <ul class="servises">
             <!-- картинка 1 -->
             <li class="servises-item">
-              <img src="./images/box-1.jpg" alt="человек пишет код" width="370" height="294" />
+              <div class="servises-item-box">
+                <img src="./images/box-1.jpg" alt="человек пишет код" width="370" height="294" />
+                <div class="servises-item-lable">
+                  <h3 class="servises-item-header">Десктопные приложения</h3>
+                </div>
+              </div>
             </li>
             <!-- картинка 2 -->
             <li class="servises-item">
-              <img
+              <div class="servises-item-box">
+                <img
                 src="./images/box-2.jpg"
                 alt="человек держит смартфон и смотрит дизайн на ноутбуке"
                 width="370"
                 height="294"
               />
+                <div class="servises-item-lable">
+                  <h3 class="servises-item-header">Мобильные приложения</h3>
+                </div>
+              </div>
+              
             </li>
             <!-- картинка 3 -->
             <li class="servises-item">
-              <img
+              <div class="servises-item-box">
+                <img
                 src="./images/box-3.jpg"
                 alt="человек выбирает цвет на плашете"
                 width="370"
                 height="294"
               />
+                <div class="servises-item-lable">
+                  <h3 class="servises-item-header">Дизайнерские решения</h3>
+                </div>
+              </div>
+              
             </li>
           </ul>
         </div>
@@ -481,5 +499,21 @@
         </div>
       </div>
     </footer>
+
+    <!-- start модальное окно  -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-button" data-modal-close>
+          <svg class="modal-icon" width="30" height="30">
+            <use href="./images/icons.svg#icon-close">
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- end модальное окно  -->
+    
+    <!-- start script -->
+    <script src="./js/modal.js"></script>
+    <!-- end script -->
   </body>
 </html>
